@@ -1,0 +1,264 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="description" content="Find your college Projects and develop in your style, open source free projects ideas, Html, Python, Java, C, Node etc..">
+        <meta name="author" contant="kidKrishkode">
+        <title version="1.0">Verify window</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="icon" href="./fav-icon/logo.png">
+        <link rel="stylesheet" href="./Components/style.css">
+    </head>
+<style>
+#root h2{
+    text-align: center;
+    margin-top: 40px;
+    color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#root section{
+    background: #000;
+    width: 50%;
+    margin: 2px 25%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#progress{
+    margin: 0px 0px 10px 0px;
+    width: 30%;
+    height: 3px;
+    background: blue;
+    position: relative;
+    animation: scanne 0.7s linear infinite;
+}
+@keyframes scanne{
+    0%{
+        left: 2px;
+        border-top-left-radius: 10px;
+    }50%{
+        left: 40%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }100%{
+        left: 90%;
+        border-top-right-radius: 10px;
+    }
+}
+#task{
+    margin: 0px 0px;
+    padding: 10px 4px;
+    width: 100%;
+}
+.btnHolder{
+    width: 40%;
+    margin: 10px 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.btnHolder .btn{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+}
+.component{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.left_component{
+    width: 90%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.top_component{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    color: #fff;
+}
+.bottom_component{
+    font-size: 18px;
+    margin-top: 0px;
+    margin-left: 5px;
+    font-family: sans-serif;
+    color: grey;
+}
+.right_component{
+    width: 10%;
+    margin: 0px;
+    font-size: 22px;
+    padding-top: 8px;
+    color: #0c8ff0;
+    text-align: center;
+}
+@media only screen and (max-width: 900px){
+    #root h2{
+        margin-top: 20px;
+    }
+    #root section{
+        width: 90%;
+        margin: 2px 5%;
+    }
+    .top_component{
+        font-size: 18px;
+    }
+    .bottom_component{
+        font-size: 12px;
+    }
+    .right_component,.btnHolder .btn{
+        font-size: 16px;
+    }
+    .btnHolder{
+        width: 90%;
+        margin: 10px 5%;
+    }
+}
+</style>
+<body id="root">
+    <h2>Verify Systems</h2>
+    <section>
+        <div id="progress"></div>
+        <div id="task">
+            <div class="component">
+                <div class="left_component">
+                    <div class="top_component">Browser</div>
+                    <div class="bottom_component" id="d1">loading..</div>
+                </div>
+                <div class="right_component" id="v1">Null</div>
+            </div>
+            <div class="component">
+                <div class="left_component">
+                    <div class="top_component">Version</div>
+                    <div class="bottom_component" id="d2">loading..</div>
+                </div>
+                <div class="right_component" id="v2">Null</div>
+            </div>
+            <div class="component">
+                <div class="left_component">
+                    <div class="top_component">Screen Ratio</div>
+                    <div class="bottom_component" id="d3">loading..</div>
+                </div>
+                <div class="right_component" id="v3">Null</div>
+            </div>
+            <div class="component">
+                <div class="left_component">
+                    <div class="top_component">Internet</div>
+                    <div class="bottom_component" id="d4">loading..</div>
+                </div>
+                <div class="right_component" id="v4">No</div>
+            </div>
+            <div class="component">
+                <div class="left_component">
+                    <div class="top_component">Agent Name</div>
+                    <div class="bottom_component" id="d5">loading..</div>
+                </div>
+                <div class="right_component" id="v5">Null</div>
+            </div>
+            <div class="component">
+                <div class="left_component">
+                    <div class="top_component">User Id</div>
+                    <div class="bottom_component" id="d6">loading..</div>
+                </div>
+                <div class="right_component" id="v6">Null</div>
+            </div>
+            <div class="component">
+                <div class="left_component">
+                    <div class="top_component">Location</div>
+                    <div class="bottom_component" id="d7">loading..</div>
+                </div>
+                <div class="right_component" id="v7">Null</div>
+            </div>
+        </div>
+    </section>
+    <div class="btnHolder">
+        <button class="btn">Cancel</button>
+        <button class="btn btn-primary"onclick="window.location='./main.html'">Next</button>
+    </div>
+</body>
+<script src="./Database/localdata.js"></script>
+<script src="./Components/defult.js"></script>
+<script>
+verify();
+function verify(){
+    var objappVersion = navigator.appVersion; 
+    var browserAgent = navigator.userAgent; 
+    var browserName = navigator.appName; 
+    var browserVersion = '' + parseFloat(navigator.appVersion); 
+    var browserMajorVersion = parseInt(navigator.appVersion, 10); 
+    var Offset, OffsetVersion, ix; 
+    if((OffsetVersion = browserAgent.indexOf("Chrome")) != -1){ 
+        browserName = "Chrome"; 
+        browserVersion = browserAgent.substring(OffsetVersion + 7);
+    }else if((OffsetVersion = browserAgent.indexOf("MSIE")) != -1){ 
+        browserName = "Microsoft Internet Explorer"; 
+        browserVersion = browserAgent.substring(OffsetVersion + 5); 
+    }else if((OffsetVersion = browserAgent.indexOf("Firefox")) != -1){ 
+        browserName = "Firefox"; 
+    }else if((OffsetVersion = browserAgent.indexOf("Safari")) != -1){ 
+        browserName = "Safari"; 
+        browserVersion = browserAgent.substring(OffsetVersion + 7); 
+        if((OffsetVersion = browserAgent.indexOf("Version")) != -1) 
+            browserVersion = browserAgent.substring(OffsetVersion + 8); 
+    }else if((Offset = browserAgent.lastIndexOf(' ') + 1) < (OffsetVersion = browserAgent.lastIndexOf('/'))){ 
+        browserName = browserAgent.substring(Offset, OffsetVersion); 
+        browserVersion = browserAgent.substring(OffsetVersion + 1); 
+        if(browserName.toLowerCase() == browserName.toUpperCase()){ 
+            browserName = navigator.appName; 
+        } 
+    } 
+    if((ix = browserVersion.indexOf(";")) != -1) 
+        browserVersion = browserVersion.substring(0, ix); 
+    if((ix = browserVersion.indexOf(" ")) != -1) 
+        browserVersion = browserVersion.substring(0, ix); 
+        browserMajorVersion = parseInt('' + browserVersion, 10); 
+    if(isNaN(browserMajorVersion)){ 
+        browserVersion = '' + parseFloat(navigator.appVersion); 
+        browserMajorVersion = parseInt(navigator.appVersion, 10); 
+    } 
+    document.getElementById("d1").innerHTML = `${browserName}`;
+    document.getElementById("d2").innerHTML = `${browserVersion}`;
+    document.getElementById("d5").innerHTML = `${navigator.appName}`;
+    deviceCheck(navigator.userAgent);
+    try{
+        var userImageLink = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200714180638/CIP_Launch-banner.png";
+        var time_start, end_time;
+        var downloadSize = 5616998;
+        var downloadImgSrc = new Image();
+        downloadImgSrc.onload = function(){
+            end_time = new Date().getTime();
+            displaySpeed(time_start,end_time,downloadSize);
+        };
+        time_start = new Date().getTime();
+        downloadImgSrc.src = userImageLink;
+    }catch(error){
+        document.getElementById("d4").innerHTML = 'Offline';
+    }
+}
+function displaySpeed(time_start,end_time,downloadSize){ 
+    var timeDuration = (end_time - time_start) / 1000; 
+    var loadedBits = downloadSize * 8; 
+    var bps = (loadedBits / timeDuration).toFixed(2); 
+    var speedInKbps = (bps / 1024).toFixed(2); 
+    var speedInMbps = (speedInKbps / 1024).toFixed(2); 
+    document.getElementById("d4").innerHTML = `${speedInKbps}kb/s`;
+}
+function deviceCheck(details){
+	let regexp = /android|iphone|kindle|ipad/i;
+	let isMobileDevice = regexp.test(details);
+	if(isMobileDevice){ 
+        document.getElementById("d3").innerHTML = `Mobile vision`; 
+    }else{ 
+        document.getElementById("d3").innerHTML = `Desktop vision`; 
+    }
+}
+</script>
+</html>

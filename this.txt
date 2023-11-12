@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Npm</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<style>
+    body{
+        background: #000000ec;
+    }
+    .side{
+        display: flex;
+        flex-direction: row;
+        margin: 0px 0px;
+    }
+    .side-r{
+        width: 80%;
+        color: #fff;
+        padding: 20px;
+        font-family: sans-serif;
+    }
+    .side-l{
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        padding-top: 40px;
+    }
+    .side-l button{
+        background: transparent;
+        color: #f6f6f6;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 4px;
+        align-items: center;
+        cursor: pointer;
+        width: 60%;
+        margin: 10px 20%;
+    }
+    .side-l button:hover,#blink{
+        background: #28a745;
+        color: #fff;
+    }
+    .side-r p{
+        text-align: justify;
+        color: grey;
+    }
+    .side-r p a{
+        color:#28a745;
+    }
+    .side-r div{
+        font-family: Consolas, 'Courier New', monospace;
+        background: #2f2f2fbc;
+        padding: 3px;
+        width: 80%;
+        margin: 10px auto;
+    }
+    .side-r div ul li{
+        color: #28a745;
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 900px){
+        .side-l button{
+            padding: 4px 6px;
+            width: 80%;
+            margin: 10px 10%;
+            font-size: 10px;
+        }
+    }
+</style>
+<body>
+    <div class="side">
+            <div class="side-l">
+                <button id="blink">Docs</button>
+                <button>v18.17.1 API</button>
+                <button>v20.5.1 API</button>
+                <button>ES6 and beyond</button>
+                <button>Guides</button>
+                <button>Dependencies</button>
+            </div>
+            <div class="side-r">
+                <h3>About documentation</h3>
+                <p>There are several types of documentation available on this website:</p><br>
+                <ul>
+                    <li>API reference documentation</li>
+                    <li>ES6 features</li>
+                    <li>Guides</li>
+                    <li>Dependencies</li>
+                </ul><br>
+                <h3>API reference documentation</h3>
+                <p>The <a href="/">API reference documentation</a> provides detailed information about a function or object in Node.js. This documentation 
+                indicates what arguments a method accepts, the return value of that method, and what errors may be related to that method. 
+                It also indicates which methods are available for different versions of Node.<br>
+                This documentation describes the built-in modules provided by Node.js. It does not document modules provided by the community.                
+                </p>
+                <div>Looking for API docs of previous releases?
+                    <ul>
+                        <li>Node.js 20.x</li>
+                        <li>Node.js 19.x</li>
+                        <li>Node.js 18.x</li>
+                        <li>Node.js 17.x</li>
+                        <li>Node.js 16.x</li>
+                        <li>Node.js 15.x</li>
+                        <li>Node.js 14.x</li>
+                        <li>Node.js 13.x</li>
+                        <li>Node.js 12.x</li>
+                        <li>Node.js 11.x</li>
+                        <li>Node.js 10.x</li>
+                        <li>Node.js 9.x</li>
+                        <li>Node.js 8.x</li>
+                        <li>Node.js 7.x</li>
+                        <li>Node.js 6.x</li>
+                        <li>Node.js 5.x</li>
+                        <li>Node.js 4.x</li>
+                        <li>Node.js 0.12.x</li>
+                        <li>Node.js 0.10.x</li>
+                    </ul>
+                    All versions
+                </div>
+                <h3>ES6 features</h3>
+                <p>The ES6 section describes the three ES6 feature groups, and details which features are enabled by default in Node.js, alongside 
+                explanatory links. It also shows how to find which version of V8 shipped with a particular Node.js release.
+                </p>
+                <h3>Guides</h3>
+                <p>The Guides section has long-form, in-depth articles about Node.js technical features and capabilities.
+                </p>
+                <h3>Dependencies</h3>
+                <p>Node.js depends on additional components beyond the Node.js code itself. These dependencies provide both native and JavaScript code 
+                and are built together with the code under the src and lib directories to create the Node.js binaries.
+                </p>
+            </div>
+        </div>
+</body>
+</html>

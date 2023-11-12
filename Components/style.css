@@ -1,0 +1,449 @@
+body{
+    background: #000000ec;
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+}
+#HomePage,#AboutPage{
+    display: none;
+    width: 100%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #343a40;
+    width: 100%;
+    height: auto;
+    color: #cfd2d6;
+    padding: 8px 0px;
+}
+.hameburger,.downMenu{
+    display: none;
+}
+.hameburger{
+    border: 2px solid #fff;
+    border-radius: 8px;
+    width: 70%;
+}
+.hameburger div{
+    width: 80%;
+    background: #fff;
+    height: 8%;
+    margin: 12% 10%;
+    border-radius: 20px;
+}
+#left_nav,#right_nav,.collapse ul,.colide ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+#left_nav{
+    width: 80%;
+}
+#right_nav{
+    width: 18%;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 8px;
+    padding: 0px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.collapse ul li a,.colide ul li a{
+    color: #cfd2d6!important;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+.home{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.right_search,.middle_search{
+    margin: 0px;
+    padding-top: 5px;
+}
+.right_search .search-control,.middle_search .search-control{
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #000;
+    outline: none;
+    padding: 14px 18px;
+    margin-right: 8px;
+    
+}
+.right_search .search-control:hover,.middle_search .search-control:hover{
+    box-shadow: 0px 0px 3px 1px #00ff09;
+    border: 2px solid grey;
+}
+.right_search .btn,.middle_search .btn{
+    border-radius: 8px;
+    border: 2px solid #00ff09;
+    color: #00ff09;
+    background: transparent;
+    font-size: 16px;
+    padding: 13px 6px;
+    
+}
+.right_search .btn:hover,.middle_search .btn:hover{
+    color: #fff;
+    background: green;
+}
+.middle_search .search-control,.middle_search .btn{
+    padding: 8px 6px;
+    font-size: 12px;
+    outline: none;
+}
+.downMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #181c36;
+    width: 100%;
+    height: auto;
+    color: #cfd2d6;
+    padding: 8px 0px;
+    transition: 0.8s ease;
+    display: none;
+}
+.colide ul li a{
+    font-size: 12px;
+}
+#bottom_nav{
+    text-align: center;
+    margin-bottom: 5px;
+}
+#HomePage{
+    width: 100%;
+    padding: 20px auto;
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 140px;
+    color: #fff;
+}
+section h1{
+    margin-top: 200px;
+    color: grey;
+    font-size: 38px;
+}
+section p{
+    line-height: 32px;
+    font-size: 22px;
+    padding: 2px 40px;
+}
+section .welbtn{
+    width: 35%;
+    margin: auto calc((100% - 35%)/2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+section div div{
+    display: flex;
+    flex-direction: column;
+}
+section div div button{
+    background: #28a745;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    width: 240px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 4px;
+    align-items: center;
+    cursor: pointer;
+}
+section div div button span{
+    font-size: 30px;
+    font-weight: 800;
+}
+.support{
+    width: 240px;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #28a745;
+}
+section p a{
+    color:#28a745;
+}
+footer{
+    overflow-x: hidden;
+    background: #343a40;
+    height: auto;
+    width: 100%;
+    padding: 40px 0 0 0;
+    color: #cfd2d6;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer p{
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    padding: 2px 40px;
+    text-align: justify;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    padding: 0px;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: dodgerblue;
+}
+.footer-copyright{
+    background: #343a40;
+    width: 100vw;
+    padding: 10px 20px 10px 20px;
+    border-top: 2px solid grey;
+}
+.footer-copyright p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-align: center;
+    justify-content: center;
+}
+.footer-copyright p span{
+    margin-left: 10%;
+}
+.side{
+    display: flex;
+    flex-direction: row;
+    margin: auto 0%;
+    width: 100%;
+}
+.side-r{
+    width: 80%;
+    color: #fff;
+    padding: 20px;
+    font-family: sans-serif;
+    margin: 0px 0px;
+}
+.side-l{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding-top: 40px;
+}
+.side-l button{
+    background: transparent;
+    color: #f6f6f6;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 4px;
+    align-items: center;
+    cursor: pointer;
+    width: 60%;
+    margin: 10px 20%;
+    outline: none;
+}
+.side-l button:hover,#blink{
+    box-shadow: 0px 0px 3px 2px #28a745;
+    color: #fff;
+}
+.side-r p{
+    text-align: justify;
+    color: grey;
+}
+.side-r p a{
+    color:#28a745;
+}
+.side-r div{
+    font-family: Consolas, 'Courier New', monospace;
+    background: #2f2f2fbc;
+    padding: 3px;
+    width: 80%;
+    margin: 10px auto;
+}
+ul{
+    list-style: none;
+}
+#ad0,#ad1,#ad2,#ad3{
+	display: none;
+}
+@keyframes typing{
+  0%{
+    content: "Welcome to our Project.Lab";
+  }25%{
+    content: "kidKrishkode provide open source projects";
+  }50%{
+    content: "Top Engineering projects in free of cost";
+  }75%{
+    content: "Explore new projects in one click";
+  }100%{
+    content: "Join with us";
+  }
+}
+#HomePage h4::before{
+  display: inline-block;
+  overflow: hidden;
+}
+#HomePage h4{
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+@keyframes write{
+    from{ 
+        width: 0px; 
+    }to{ 
+        width: 25%; 
+    }
+}
+@keyframes blink-caret{
+  from, to { border-color: transparent }
+  50% { border-color: blueviolet }
+}
+#h41,#h42,#h43,#h44,#h45{
+    display: none;
+    color: antiquewhite;
+    margin: 10px auto;
+    border-right: .15em solid blue;
+    overflow: hidden;
+    width: 100%;
+    animation: write 5s steps(30, end) infinite,blink-caret 0.5s step-end infinite;
+}
+#h40{
+    width: 200px;
+    height: 35px;
+    margin: 5px auto;
+    background: #352f2fd0;
+    border-radius: 50px;
+    text-align: left;
+}
+#h40 span{
+    animation: taps 1.2s infinite ease-in;
+    position: absolute;
+}
+@keyframes taps{
+    from{
+        transform: translateX(0px);
+    }to{
+        transform: translateX(180px);
+    }
+}
+@media only screen and (max-width: 900px){
+    .logo{
+        font-size: 16px;
+    }
+    .hameburger{
+        display: block;
+        height: 32px;
+    }
+    .hameburger:hover{
+        box-shadow: 0px 0px 3px 2px #000;
+    }
+    .collapse,.right_search,.downMenu{
+        display: none;
+    }
+    section h1{
+        font-size: 24px;
+        margin-top: 80px;
+    }
+    section h3{
+        font-size: 22px;
+    }
+    section h4{
+        font-size: 18px;
+    }
+    section p{
+        line-height: 22px;
+        font-size: 14px;
+        padding: 2px 30px;
+    }
+    section div{
+        width: 80%;
+        margin: auto 10%;
+    }
+    section .welbtn{
+        width: 50%;
+        margin: auto calc((100% - 50%)/2.1);
+    }
+    section div div button{
+        font-size: 8px;
+        width: 160px;
+        padding: 8px 10px;
+    }
+    section div div button span{
+        font-size: 14px;
+    }
+    .support{
+        width: 160px;
+        font-size: 7px;
+    }
+    .side{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .side-l,.side-r{
+        width: 100%;
+        margin: 0px 0px;
+    }.side-l{
+    	padding: 10px 0px;
+    }.side-r{
+        width: 88%;
+    }
+    .side-l button{
+        padding: 8px 6px;
+        width: 80%;
+        margin: 10px 10%;
+        font-size: 16px;
+    }
+    #h41,#h42,#h43,#h44,#h45{
+        margin: 0px auto;
+    }
+    #h40{
+        width: 100px;
+        height: 30px;
+        margin: 0px auto;
+    }
+    @keyframes taps{
+        from{
+            transform: translateX(0px);
+        }to{
+            transform: translateX(90px);
+        }
+    }
+    @keyframes write{
+        from{ 
+            width: 0px; 
+        }to{ 
+            width: 100%; 
+        }
+    }
+}

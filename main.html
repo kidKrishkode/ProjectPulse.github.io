@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Find your college Projects and develop in your style, open source free projects ideas, Html, Python, Java, C, Node etc..">
+    <meta name="author" contant="kidKrishkode">
+    <title version="1.0">{{com.name}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="./fav-icon/logo.png">
+    <link rel="stylesheet" href="./Components/style.css">
+</head>
+<body id="root" onload="user();">
+    <header>
+        <div id="left_nav">
+            <div class="logo">{{com.name}}</div>
+            <div class="collapse">
+                <ul class="menubar" style="color: grey;">
+                    <li class="menu-item" onclick="pageRout(0);"id="p0">
+                        <a class="menu-link" aria-current="page">Home</a>
+                    </li>
+                    <li class="menu-item" onclick="pageRout(1);"id="p1">
+                        <a class="menu-link">About</a>
+                    </li>
+                    <li class="menu-item" onclick="pageRout(2);"id="p2">
+                        <a class="menu-link">Projects</a>
+                    </li>
+                    <li class="menu-item" onclick="pageRout(3);"id="p3">
+                        <a class="menu-link">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="right_nav">
+            <form class="right_search">
+                <input class="search-control" id="S1" type="search" placeholder="Search Projects" aria-label="Search" onkeyup="search('S1');"/>
+                <span class="btn" type="submit" onclick="search('S1');">Search</span>
+            </form>
+            <div class="hameburger" onclick="menubar();">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <div class="downMenu">
+        <div id="top_nav">
+            <div class="colide">
+                <ul class="menubar" style="color: grey;">
+                    <li class="menu-item" onclick="pageRout(0);"id="pm0">
+                        <a class="menu-link" aria-current="page">Home</a>
+                    </li>
+                    <li class="menu-item" onclick="pageRout(1);"id="pm1">
+                        <a class="menu-link">About</a>
+                    </li>
+                    <li class="menu-item" onclick="pageRout(2);"id="pm2">
+                        <a class="menu-link">Projects</a>
+                    </li>
+                    <li class="menu-item" onclick="pageRout(3);"id="pm3">
+                        <a class="menu-link">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom_nav">
+            <form class="middle_search">
+                <input class="search-control" type="search" id="S2" placeholder="Search Projects" aria-label="Search" onkeyup="search('S2');"/>
+                <span class="btn" type="submit" onclick="search('S2');">Search</span>
+            </form>
+        </div>
+    </div>
+    <section id="HomePage">
+        <h1>WELCOME TO {{com.name}}</h1>
+        <h4>
+            <div id="h40"><span>.</span></div>
+            <span id="h41">Welcome to our {{com.name}}'s window</span>
+            <span id="h42">{{com.owner}} provide open source projects</span>
+            <span id="h43">Top Engineering projects in free of cost</span>
+            <span id="h44">Explore new projects in one click</span>
+            <span id="h45">Join with us, being eye witness of future</span>
+        </h4>
+        <p>We are providing you engineering level(final year)<br> projects with there source code, explore popular<br> project ideas with us.</p>
+        <div class="welbtn">
+            <div title="Download most populare projects in your device">
+                <button onclick="pageRout(2);"><span>Explore Now</span>Recommended For Most User</button>
+                <span class="support">Other Downloads | Free codes | Feedback</span>
+            </div>
+            <div title="Contact us for any requirments">
+                <button onclick="pageRout(3);"><span>Contact Us</span>Share your project ideas</button>
+                <span class="support">Help | Modification | Join us | Ratings</span>
+            </div>
+        </div>
+        <p>For information about modified releases, see the<br><a href="/">release schedule</a>.</p>
+    </section>
+    <section id="AboutPage">
+        <div class="side">
+            <div class="side-l">
+                <button id="abtn0" onclick="aboutRout(0);">About {{com.name}}</button>
+                <button id="abtn1" onclick="aboutRout(1);">About {{com.owner}}</button>
+                <button id="abtn2" onclick="aboutRout(2);">About {{com.founder}}</button>
+                <button id="abtn3" onclick="aboutRout(3);">Guides & Dependencies</button>
+            </div>
+            <div class="side-r" id="ad0">
+                <h3>About {{com.name}}</h3>
+                <p>There are several types of documentation available on this website:</p><br>
+                <ul>
+                    <li>API reference documentation</li>
+                    <li>ES6 features</li>
+                    <li>Guides</li>
+                    <li>Dependencies</li>
+                </ul><br>
+                <h3>API reference documentation</h3>
+                <p>The <a href="/">API reference documentation</a> provides detailed information about a function or object in Node.js. This documentation 
+                indicates what arguments a method accepts, the return value of that method, and what errors may be related to that method. 
+                It also indicates which methods are available for different versions of Node.<br>
+                This documentation describes the built-in modules provided by Node.js. It does not document modules provided by the community.                
+                </p>
+                <div>Looking for API docs of previous releases?
+                    <ul>
+                        <li>Node.js 20.x</li>
+                        <li>Node.js 19.x</li>
+                        <li>Node.js 18.x</li>
+                        <li>Node.js 17.x</li>
+                        <li>Node.js 16.x</li>
+                        <li>Node.js 15.x</li>
+                        <li>Node.js 14.x</li>
+                        <li>Node.js 13.x</li>
+                        <li>Node.js 12.x</li>
+                        <li>Node.js 11.x</li>
+                        <li>Node.js 10.x</li>
+                        <li>Node.js 9.x</li>
+                        <li>Node.js 8.x</li>
+                        <li>Node.js 7.x</li>
+                        <li>Node.js 6.x</li>
+                        <li>Node.js 5.x</li>
+                        <li>Node.js 4.x</li>
+                        <li>Node.js 0.12.x</li>
+                        <li>Node.js 0.10.x</li>
+                    </ul>
+                    All versions
+                </div>
+                <h3>ES6 features</h3>
+                <p>The ES6 section describes the three ES6 feature groups, and details which features are enabled by default in Node.js, alongside 
+                explanatory links. It also shows how to find which version of V8 shipped with a particular Node.js release.
+                </p>
+                <h3>Guides</h3>
+                <p>The Guides section has long-form, in-depth articles about Node.js technical features and capabilities.
+                </p>
+                <h3>Dependencies</h3>
+                <p>Node.js depends on additional components beyond the Node.js code itself. These dependencies provide both native and JavaScript code 
+                and are built together with the code under the src and lib directories to create the Node.js binaries.
+                </p>
+            </div>
+            <div class="side-r" id="ad1">
+            	<h3>About {{com.owner}}</h3>
+                <p>Lorem ipsum set amet dolar.</p>
+            </div>
+            <div class="side-r" id="ad2">
+            	<h3>About {{com.founder}}</h3>
+                <p>Lorem ipsum set amet dolar.</p>
+            </div>
+            <div class="side-r" id="ad3">
+            	<h3>Dependencies</h3>
+                <p>Lorem ipsum set amet dolar.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <h2>{{com.name}}</h2>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+            <p>
+                We emphasize our commitment to fostering a collaborative community for students engaged in innovative project development. 
+                Here, you'll discover a curated collection of impactful projects spanning websites, apps, and more, tailored specifically for computer 
+                science enthusiasts. At {{com.name}}, we encourage knowledge sharing by providing a platform for students to exchange project ideas, 
+                delve into relevant studies, and collectively contribute to the realm of technological advancement. Our mission extends beyond projects 
+                – it's about nurturing an environment that inspires creativity and growth. As we embark on this educational journey together, your 
+                participation is not just welcomed; it's integral to the heartbeat of {{com.name}}. Join us in shaping the future of technology.
+            </p>
+            <div class="footer-copyright">
+                <p>copyright ©<a id="year">2023</a> {{com.name}} <span>All rights under reserved</span></p>
+                <p style="cursor:pointer;">Privacy Statements</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./Database/localdata.js"></script>
+<script src="./Components/defult.js"></script>
+</html>
