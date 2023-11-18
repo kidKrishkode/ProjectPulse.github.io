@@ -5,7 +5,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Find your college Projects and develop in your style, open source free projects ideas, Html, Python, Java, C, Node etc..">
     <meta name="author" contant="kidKrishkode">
-    <title version="1.0">{{com.name}}</title>
+    <title version="1.0">ProjectPulse</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" href="./fav-icon/logo.png">
@@ -15,7 +15,7 @@
     <header>
         <div id="left_nav">
             <div class="logo">{{com.name}}</div>
-            <div class="collapse">
+            <div class="collapses">
                 <ul class="menubar" style="color: grey;">
                     <li class="menu-item" onclick="pageRout(0);"id="p0">
                         <a class="menu-link" aria-current="page">Home</a>
@@ -29,6 +29,9 @@
                     <li class="menu-item" onclick="pageRout(3);"id="p3">
                         <a class="menu-link">Help</a>
                     </li>
+                    <li class="menu-item" onclick="colorTogule();"id="p4">
+                        <a class="menu-link" title="Dark/Light modes">&#x2600;</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -37,6 +40,9 @@
                 <input class="search-control" id="S1" type="search" placeholder="Search Projects" aria-label="Search" onkeyup="search('S1');"/>
                 <span class="btn" type="submit" onclick="search('S1');">Search</span>
             </form>
+            <li class="menu-item" onclick="account();"id="p5"title="Account details">
+                <a class="menu-link">&#x1f464;</a>
+            </li>
             <div class="hameburger" onclick="menubar();">
                 <div></div>
                 <div></div>
@@ -60,6 +66,12 @@
                     <li class="menu-item" onclick="pageRout(3);"id="pm3">
                         <a class="menu-link">Help</a>
                     </li>
+                    <li class="menu-item" onclick="colorTogule();"id="pm4">
+                        <a class="menu-link">&#x2600;</a>
+                    </li>
+                    <li class="menu-item" onclick="account();"id="pm5">
+                        <a class="menu-link">&#x1f464;</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -80,7 +92,7 @@
             <span id="h44">Explore new projects in one click</span>
             <span id="h45">Join with us, being eye witness of future</span>
         </h4>
-        <p>We are providing you engineering level(final year)<br> projects with there source code, explore popular<br> project ideas with us.</p>
+        <p>We are providing you engineering level (final year)<br> projects with there source code, explore popular<br> project ideas with us.</p>
         <div class="welbtn">
             <div title="Download most populare projects in your device">
                 <button onclick="pageRout(2);"><span>Explore Now</span>Recommended For Most User</button>
@@ -166,6 +178,21 @@
             </div>
         </div>
     </section>
+    <section id="ProjectPage">
+    	<div class="projects">
+    	    <div class="project">
+    	          <div class="upper">
+    	               <img src="#" alt="loading.."/>
+    	          </div>
+                  <div class="down">
+                  	<h2>Lorem ipsum dolar set amet.
+    	          </div>
+    	    </div>
+    	</div>
+    </section>
+    <section id="HelpPage">
+    	
+    </section>
     <footer>
         <div class="footer">
             <h2>{{com.name}}</h2>
@@ -192,5 +219,6 @@
     </footer>
 </body>
 <script src="./Database/localdata.js"></script>
+<script src="./Database/styledata.js"></script>
 <script src="./Components/defult.js"></script>
 </html>

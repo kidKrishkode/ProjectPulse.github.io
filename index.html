@@ -100,6 +100,12 @@
     color: #0c8ff0;
     text-align: center;
 }
+.right_component .red{
+    color: red;
+}
+.right_component .green{
+    color: greenyellow;
+}
 @media only screen and (max-width: 900px){
     #root h2{
         margin-top: 20px;
@@ -123,7 +129,7 @@
     }
 }
 </style>
-<body id="root">
+<body id="root" onload="verify();">
     <h2>Verify Systems</h2>
     <section>
         <div id="progress"></div>
@@ -133,49 +139,49 @@
                     <div class="top_component">Browser</div>
                     <div class="bottom_component" id="d1">loading..</div>
                 </div>
-                <div class="right_component" id="v1">Null</div>
+                <div class="right_component" id="v1">&#x2b55;</div>
             </div>
             <div class="component">
                 <div class="left_component">
                     <div class="top_component">Version</div>
                     <div class="bottom_component" id="d2">loading..</div>
                 </div>
-                <div class="right_component" id="v2">Null</div>
+                <div class="right_component" id="v2">&#x2b55;</div>
             </div>
             <div class="component">
                 <div class="left_component">
                     <div class="top_component">Screen Ratio</div>
                     <div class="bottom_component" id="d3">loading..</div>
                 </div>
-                <div class="right_component" id="v3">Null</div>
+                <div class="right_component" id="v3">&#x2b55;</div>
             </div>
             <div class="component">
                 <div class="left_component">
                     <div class="top_component">Internet</div>
                     <div class="bottom_component" id="d4">loading..</div>
                 </div>
-                <div class="right_component" id="v4">No</div>
+                <div class="right_component" id="v4">&#x2b55;</div>
             </div>
             <div class="component">
                 <div class="left_component">
                     <div class="top_component">Agent Name</div>
                     <div class="bottom_component" id="d5">loading..</div>
                 </div>
-                <div class="right_component" id="v5">Null</div>
+                <div class="right_component" id="v5">&#x2b55;</div>
             </div>
             <div class="component">
                 <div class="left_component">
                     <div class="top_component">User Id</div>
                     <div class="bottom_component" id="d6">loading..</div>
                 </div>
-                <div class="right_component" id="v6">Null</div>
+                <div class="right_component" id="v6">&#x2b55;</div>
             </div>
             <div class="component">
                 <div class="left_component">
                     <div class="top_component">Location</div>
                     <div class="bottom_component" id="d7">loading..</div>
                 </div>
-                <div class="right_component" id="v7">Null</div>
+                <div class="right_component" id="v7">&#x2b55;</div>
             </div>
         </div>
     </section>
@@ -187,7 +193,8 @@
 <script src="./Database/localdata.js"></script>
 <script src="./Components/defult.js"></script>
 <script>
-verify();
+let valid = [["Chrome","Microsoft Internet Explorer","Firefox","Safari"],[109,114,119],["Mobile vision","Desktop vision"],[100,80]];
+let SuperCounter=0;
 function verify(){
     var objappVersion = navigator.appVersion; 
     var browserAgent = navigator.userAgent; 
@@ -227,21 +234,27 @@ function verify(){
     document.getElementById("d1").innerHTML = `${browserName}`;
     document.getElementById("d2").innerHTML = `${browserVersion}`;
     document.getElementById("d5").innerHTML = `${navigator.appName}`;
+    validity(valid[0],1,browserName,"Unkown browser, please use register one",2000);
+    validity(valid[1],2,browserVersion[0]+browserVersion[1]+browserVersion[2],"Update your browser, this version is very old",2500);
+    validity(['Netscape','Mozila'],5,navigator.appName,"UnAuthorize agent uses, try to use common agents",4000);
     deviceCheck(navigator.userAgent);
-    try{
-        var userImageLink = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200714180638/CIP_Launch-banner.png";
-        var time_start, end_time;
-        var downloadSize = 5616998;
-        var downloadImgSrc = new Image();
-        downloadImgSrc.onload = function(){
-            end_time = new Date().getTime();
-            displaySpeed(time_start,end_time,downloadSize);
-        };
-        time_start = new Date().getTime();
-        downloadImgSrc.src = userImageLink;
-    }catch(error){
-        document.getElementById("d4").innerHTML = 'Offline';
-    }
+    getUserLocation();
+    var userImageLink = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200714180638/CIP_Launch-banner.png";
+    var time_start, end_time;
+    var downloadSize = 5616998;
+    var downloadImgSrc = new Image();
+    downloadImgSrc.onload = function(){
+        end_time = new Date().getTime();
+        displaySpeed(time_start,end_time,downloadSize);
+    };
+    time_start = new Date().getTime();
+    downloadImgSrc.src = userImageLink;
+    setTimeout(()=>{
+        if(document.getElementById("d4").innerHTML=='loading..'){
+            document.getElementById("d4").innerHTML = 'Offline';
+            validity(valid[3],4,-1,"No internet connection\nTry these steps to get back online\n#Check your modem and router\n#Reconnect to Wi-Fi",2500);
+        }
+    },2000);
 }
 function displaySpeed(time_start,end_time,downloadSize){ 
     var timeDuration = (end_time - time_start) / 1000; 
@@ -249,7 +262,8 @@ function displaySpeed(time_start,end_time,downloadSize){
     var bps = (loadedBits / timeDuration).toFixed(2); 
     var speedInKbps = (bps / 1024).toFixed(2); 
     var speedInMbps = (speedInKbps / 1024).toFixed(2); 
-    document.getElementById("d4").innerHTML = `${speedInKbps}kb/s`;
+    document.getElementById("d4").innerHTML = `${speedInMbps}kb/s`;
+    validity(valid[3],4,Math.round(speedInMbps),"Your internet speed is very very slow, try encrise this net speed",3500);
 }
 function deviceCheck(details){
 	let regexp = /android|iphone|kindle|ipad/i;
@@ -259,6 +273,80 @@ function deviceCheck(details){
     }else{ 
         document.getElementById("d3").innerHTML = `Desktop vision`; 
     }
+    validity(valid[2],3,document.getElementById("d3").innerHTML,"Unkown vision, please use desktop or mobile to feel better media effects",3000);
+}
+
+function getUserLocation(){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition, handleError);
+    }else{
+        validError("Geolocation is not supported by this browser.Try another one!");
+    }
+    setTimeout(()=>{
+        if(document.getElementById("d7").innerHTML=='loading..'){
+            document.getElementById("d7").innerHTML='(?,?)';
+            validity([0,0],7,-1,"Your internet power not enough to get location.",5000);
+        }
+    },1000);
+}
+function showPosition(position){
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    reverseGeocode(latitude, longitude);
+}
+function reverseGeocode(latitude, longitude){
+    const placeName = `(${latitude.toFixed(2)}, ${longitude.toFixed(2)})`;
+    document.getElementById("d7").innerHTML = placeName;
+    validity([-1,-1],7,[latitude.toFixed(2),longitude.toFixed(2)],"Position is not valid",4500);
+}
+function handleError(error){
+	setTimeout (()=>{
+    switch (error.code){
+        case error.PERMISSION_DENIED:
+            validError("Browser denied the request for Geolocation.Give permission to verify.");
+        break;
+        case error.POSITION_UNAVAILABLE:
+            validError("Location information is unavailable in your GPS,Fixed it.");
+        break;
+        case error.TIMEOUT:
+            validError("The request to get your location is timed out, Refresh.");
+        break;
+        case error.UNKNOWN_ERROR:
+            validError("An unknown error occurred, Please contact us or try to connect with another device.");
+        break;
+    }
+    },5000);
+}
+function validity(loc,id,data,error,time){
+	const Timer = setTimeout(() => {
+        let temp=0;
+		for(let j=0; j<loc.length; j++){
+			if((data>=loc[j]) || (data==loc[j])){
+                SuperCounter++;
+                document.getElementById(`v${id}`).innerHTML="<span class='green'>&#x2714;</span>";
+                temp++;
+                j=loc.length+2;
+            }
+		}
+        if(temp==0){
+            document.getElementById(`v${id}`).innerHTML="<span class='red'>&#x274c;</span>";
+            setTimeout(()=>{
+                validError(error);
+            },500);
+        }
+    },time);
+}
+function validError(data){
+    alert(data+"\nPress OK to confermation!");
+    nextPage();
+}
+function nextPage(){
+    if(SuperCounter>=7){
+        console.log("next Page------>");
+    }
+    // setTimeout(()=>{
+    //     window.location=window.location.reload();
+    // },10000);
 }
 </script>
 </html>
