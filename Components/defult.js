@@ -1,6 +1,7 @@
 let nav = 0;
-let pageList = ["HomePage","AboutPage"];
+let pageList = ["HomePage","AboutPage","ProjectPage","HelpPage"];
 let aboutList = ["abtn0","abtn1","abtn2"];
+let cls = 1;
 function menubar(){
     if(nav==0){
         document.querySelector(".downMenu").style.display="block";
@@ -49,7 +50,7 @@ function aboutRout(id){
 function search(data){
 	let input = document.getElementById(`${data}`).value;
     input=input.toLowerCase();
-    console.log(input);
+    //console.log(input);
 }
 function typing(){
     var text = 0;
@@ -64,4 +65,18 @@ function typing(){
             text=0;
         }
     },5000);
+}
+function colorTogule(){
+	for(let j=0; j<colorLib[cls].collist.length; j++){
+		document.documentElement.style.setProperty(colorLib[cls].collist[j][0], colorLib[cls].collist[j][1]);
+	}
+	if(cls==0){ //dark
+        document.getElementById('p4').innerHTML = `<a class="menu-link" title="Shift to light mode">&#x2600;</a>`;
+        document.getElementById('pm4').innerHTML = `<a class="menu-link">&#x2600;</a>`;
+        cls=1;
+	}else{ //light
+        document.getElementById('p4').innerHTML = `<a class="menu-link" title="Shift to dark mode">&#x1f319;</a>`;
+        document.getElementById('pm4').innerHTML = `<a class="menu-link">&#x1f319;</a>`;
+		cls=0;
+	}
 }
