@@ -6,6 +6,7 @@
   --nvtxt-color: #cfd2d6;
   --ngtxt-color: #00ff09;
   --sg-color: #28a745;
+  --test-color: #b8b2aab9;
 }
 body{
     background: var(--bg-color);
@@ -15,7 +16,7 @@ body{
 a{
     text-decoration: none;
 }
-#HomePage,#AboutPage,#ProjectPage,#HelpPage{
+#HomePage,#AboutPage,#ProjectPage,#HelpPage,#SearchPage,#AccountPage{
     display: none;
     width: 100%;
 }
@@ -61,6 +62,7 @@ header{
 }
 .logo{
     font-size: 30px;
+    color: var(--ngtxt-color);
     font-weight: bold;
     margin: 8px;
     padding: 0px;
@@ -104,7 +106,6 @@ header{
     outline: none;
     padding: 14px 18px;
     margin-right: 8px;
-    
 }
 .right_search .search-control:hover,.middle_search .search-control:hover{
     box-shadow: 0px 0px 3px 1px var(--ngtxt-color);
@@ -117,7 +118,6 @@ header{
     background: transparent;
     font-size: 16px;
     padding: 13px 6px;
-    
 }
 .right_search .btn:hover,.middle_search .btn:hover{
     color: #fff;
@@ -221,9 +221,10 @@ footer{
 .footer p{
     margin: 10px auto;
     line-height: 28px;
-    font-size: 14px;
+    font-size: 18px;
     padding: 2px 40px;
     text-align: justify;
+    color: grey;
 }
 .socials{
     list-style: none;
@@ -256,6 +257,7 @@ footer{
     width: 100vw;
     padding: 10px 20px 10px 20px;
     border-top: 2px solid grey;
+    color: grey;
 }
 .footer-copyright p{
     font-size: 14px;
@@ -398,6 +400,53 @@ ul{
     margin: 0px;
     width: 100%;
 }
+#SearchPage,#AccountPage{
+	z-index: 99;
+	color: grey;
+}
+#AccountPage .account{
+	width: 30%;
+	margin: 100px 35%;
+    background: var(--nv-color);
+    padding: 0px 8px 10px 8px;
+    border-radius: 10px;
+}
+#AccountPage .account .accimg{
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	font-size: 150px;
+	padding: 4px;
+	border-radius: 50%;
+    position: relative;
+    top: -70px;
+	margin: 5px 0px 0px calc((100% - 200px)/2);
+	border: 1px solid blueviolet;
+	overflow: hidden;
+    background: var(--bg-color);
+}
+#AccountPage .account h4,#AccountPage .account h2,#AccountPage .account p{
+	margin: 0px;
+}
+#AccountPage .account h2{
+	color: var(--wtxt-color);
+	font-size: 22px;
+}
+#AccountPage .account p{
+	margin-bottom: 25px;
+	padding: 2px;
+}
+.btnHolder{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	margin: 0px 0px 20px 0px;
+}
+#AccountPage .account .btnHolder .btn{
+	width: 40%;
+	font-size: 16px;
+}
 @media only screen and (max-width: 900px){
     .logo{
         font-size: 16px;
@@ -499,6 +548,9 @@ ul{
             width: 100%; 
         }
     }
+    .footer p{
+        font-size: 14px;
+    }
     #ProjectPage .projects{
     	display: flex;
     	flex-direction: column;
@@ -507,5 +559,20 @@ ul{
     	width: 90%;
        margin: 0px 5%;
        padding: 0px;
+    }
+    #AccountPage .account{
+        width: 90%;
+        margin: 10px 5%;
+        background: transparent;
+        padding: 0px;
+    }
+    #AccountPage .account .accimg{
+        width: 150px;
+        height: 150px;
+        font-size: 110px;
+        margin: 5px 0px 20px calc((100% - 150px)/2);
+        border: 1px solid #0c8ff9;
+        background: transparent;
+        top:0;
     }
 }

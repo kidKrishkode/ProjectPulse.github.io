@@ -1,7 +1,9 @@
 let nav = 0;
 let pageList = ["HomePage","AboutPage","ProjectPage","HelpPage"];
 let aboutList = ["abtn0","abtn1","abtn2"];
+let additionalList = ["SearchPage","AccountPage"];
 let cls = 1;
+let SrcPg=0;
 function menubar(){
     if(nav==0){
         document.querySelector(".downMenu").style.display="block";
@@ -38,6 +40,18 @@ function pageRout(id){
         aboutList[3]="abtn3";
     	aboutRout(0);
     }
+    document.getElementById("SearchPage").style.display="none";
+    document.getElementById("AccountPage").style.display="none";
+    SrcPg=0;
+}
+function PageNull(id){
+	for(let i=0; i<pageList.length; i++){
+        document.getElementById(`${pageList[i]}`).style.display = "none";
+    }
+    for(let i=0; i<additionalList.length; i++){
+        document.getElementById(`${additionalList[i]}`).style.display = "none";
+    }
+    document.getElementById(`${id}`).style.display="block";
 }
 function aboutRout(id){
 	for(let j=0; j<aboutList.length; j++){
@@ -50,7 +64,14 @@ function aboutRout(id){
 function search(data){
 	let input = document.getElementById(`${data}`).value;
     input=input.toLowerCase();
-    //console.log(input);
+    if(SrcPg==0){
+    	PageNull("SearchPage");
+        SrcPg++;
+    }
+    if(input.includes("--")||input.includes("://")){
+        commandSearch(input);
+    }
+    document.getElementById("SearchPage").innerHTML+=input+", ";
 }
 function typing(){
     var text = 0;
@@ -79,4 +100,17 @@ function colorTogule(){
         document.getElementById('pm4').innerHTML = `<a class="menu-link">&#x1f319;</a>`;
 		cls=0;
 	}
+}
+function account(){
+	PageNull("AccountPage");
+	SrcPg=0;
+}
+function download(id,name,extansion){
+	invalid();
+}
+function reset_profile(){
+	invalid();
+}
+function invalid(){
+	alert("This features is not open for this version.");
 }
