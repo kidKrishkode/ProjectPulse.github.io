@@ -17,7 +17,7 @@ const colorLib = [
            theme: "Light",
            collist: [
                 ['--bg-color', '#f6f6f6'],
-                ['--nv-color', '#0c8ff0ec'],
+                ['--nv-color', 'linear-gradient(-20deg, transparent,powderblue)'],
                 ['--wtxt-color', '#000'],
                 ['--blink-color', 'brown'],
                 ['--nvtxt-color', '#fff'],

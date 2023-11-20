@@ -4,6 +4,9 @@ const locals = {
         owner: "kidKrishkode",
         founder: "Krishnendu Mitra"
     },
+    web: {
+    	version: "1.0.0"
+    },
     socials: {
         facebook: "https://facebook.com/",
         twitter: "https://twitter.in/",
