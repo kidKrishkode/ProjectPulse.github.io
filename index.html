@@ -297,7 +297,7 @@ function showPosition(position){
 function reverseGeocode(latitude, longitude){
     const placeName = `(${latitude.toFixed(2)}, ${longitude.toFixed(2)})`;
     document.getElementById("d7").innerHTML = placeName;
-    validity([-1,-1],7,[latitude.toFixed(2),longitude.toFixed(2)],"Position is not valid",4500);
+    validity([-1,0],7,(latitude.toFixed(2)+longitude.toFixed(2)),"Position is not valid",4500);
 }
 function handleError(error){
 	setTimeout (()=>{

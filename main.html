@@ -193,6 +193,27 @@
     <section id="HelpPage">
     	
     </section>
+    <section id="SearchPage">
+    	
+    </section>
+    <section id="AccountPage">
+    	<div class="account">
+    	      <div class="accimg">&#x1f464;</div>
+              <h4>User Name</h4>
+              <h2>Guest</h2>
+              <p>This is your user name which is visible in public. </p>
+              <h4>User ID</h4>
+              <h2>Guest@23001aK&5r9W-2h1f</h2>
+              <p>This is not your user name or pin or visible in public. This id will be use to identify your activities and register your download records.</p>
+              <h4>User Location</h4>
+              <h2>22°38', 88°21'</h2>
+              <p>This is your current coordinates , this is not visible in public.</p>
+              <div class="btnHolder">
+              	<button class="btn btn-danger" title="Delete your current account details" onclick="reset_profile();">Reset</button>
+                  <button class="btn btn-primary" title="Download your account details" onclick="download('.account','ProjectPulse_profile','txt');">Download</button>
+              </div>
+        </div>
+    </section>
     <footer>
         <div class="footer">
             <h2>{{com.name}}</h2>
@@ -209,7 +230,7 @@
                 science enthusiasts. At {{com.name}}, we encourage knowledge sharing by providing a platform for students to exchange project ideas, 
                 delve into relevant studies, and collectively contribute to the realm of technological advancement. Our mission extends beyond projects 
                 – it's about nurturing an environment that inspires creativity and growth. As we embark on this educational journey together, your 
-                participation is not just welcomed; it's integral to the heartbeat of {{com.name}}. Join us in shaping the future of technology.
+                participation is not just welcomed; it's integral to the heartbeat of {{com.name}}. <br>Join us in shaping the future of technology.
             </p>
             <div class="footer-copyright">
                 <p>copyright ©<a id="year">2023</a> {{com.name}} <span>All rights under reserved</span></p>
@@ -220,5 +241,6 @@
 </body>
 <script src="./Database/localdata.js"></script>
 <script src="./Database/styledata.js"></script>
+<script src="./Components/search.js"></script>
 <script src="./Components/defult.js"></script>
 </html>
