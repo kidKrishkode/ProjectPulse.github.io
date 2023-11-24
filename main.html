@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Find your college Projects and develop in your style, open source free projects ideas, Html, Python, Java, C, Node etc..">
-    <meta name="author" contant="kidKrishkode">
+    <meta name="author" contant="Krishnendu Mitra">
     <title version="1.0">ProjectPulse</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -17,16 +17,16 @@
             <div class="logo">{{com.name}}</div>
             <div class="collapses">
                 <ul class="menubar" style="color: grey;">
-                    <li class="menu-item" onclick="pageRout(0);"id="p0">
+                    <li class="menu-item" onclick="pageRout(0);"title="Home Page"id="p0">
                         <a class="menu-link" aria-current="page">Home</a>
                     </li>
-                    <li class="menu-item" onclick="pageRout(1);"id="p1">
+                    <li class="menu-item" onclick="pageRout(1);"title="About Page"id="p1">
                         <a class="menu-link">About</a>
                     </li>
-                    <li class="menu-item" onclick="pageRout(2);"id="p2">
+                    <li class="menu-item" onclick="pageRout(2);"title="Project Page"id="p2">
                         <a class="menu-link">Projects</a>
                     </li>
-                    <li class="menu-item" onclick="pageRout(3);"id="p3">
+                    <li class="menu-item" onclick="pageRout(3);"title="Help Page"id="p3">
                         <a class="menu-link">Help</a>
                     </li>
                     <li class="menu-item" onclick="colorTogule();"id="p4">
@@ -37,8 +37,8 @@
         </div>
         <div id="right_nav">
             <form class="right_search">
-                <input class="search-control" id="S1" type="search" placeholder="Search Projects" aria-label="Search" onkeyup="search('S1');"/>
-                <span class="btn" type="submit" onclick="search('S1');">Search</span>
+                <input class="search-control" id="S1" type="search" placeholder="Search Projects" aria-label="Search" onkeyup="search('S1');" title="Search Projects"/>
+                <span class="btn" type="submit" onclick="search('S1');" title="Click for Search">Search</span>
             </form>
             <li class="menu-item" onclick="account();"id="p5"title="Account details">
                 <a class="menu-link">&#x1f464;</a>
@@ -54,16 +54,16 @@
         <div id="top_nav">
             <div class="colide">
                 <ul class="menubar" style="color: grey;">
-                    <li class="menu-item" onclick="pageRout(0);"id="pm0">
+                    <li class="menu-item" onclick="pageRout(0);" id="pm0">
                         <a class="menu-link" aria-current="page">Home</a>
                     </li>
-                    <li class="menu-item" onclick="pageRout(1);"id="pm1">
+                    <li class="menu-item" onclick="pageRout(1);" id="pm1">
                         <a class="menu-link">About</a>
                     </li>
-                    <li class="menu-item" onclick="pageRout(2);"id="pm2">
+                    <li class="menu-item" onclick="pageRout(2);" id="pm2">
                         <a class="menu-link">Projects</a>
                     </li>
-                    <li class="menu-item" onclick="pageRout(3);"id="pm3">
+                    <li class="menu-item" onclick="pageRout(3);" id="pm3">
                         <a class="menu-link">Help</a>
                     </li>
                     <li class="menu-item" onclick="colorTogule();"id="pm4">
@@ -117,60 +117,130 @@
                 <h3>About {{com.name}}</h3>
                 <p>There are several types of documentation available on this website:</p><br>
                 <ul>
-                    <li>API reference documentation</li>
-                    <li>ES6 features</li>
-                    <li>Guides</li>
-                    <li>Dependencies</li>
+                    <li>Vision of {{com.name}}</li>
+                    <li>Code reference documentation</li>
+                    <li>Nomenclature of {{com.name}}</li>
+                    <li>Finger print of {{com.name}}</li>
                 </ul><br>
-                <h3>API reference documentation</h3>
-                <p>The <a href="/">API reference documentation</a> provides detailed information about a function or object in Node.js. This documentation 
-                indicates what arguments a method accepts, the return value of that method, and what errors may be related to that method. 
-                It also indicates which methods are available for different versions of Node.<br>
-                This documentation describes the built-in modules provided by Node.js. It does not document modules provided by the community.                
+                <h3>Vision of {{com.name}}</h3>
+                <p>{{com.name}}, the innovation of the visionary '<a href="#"onclick="aboutRout(1);">{{com.owner}}</a>,' stands as a beacon in the 
+                    realm of education and innovation. Founded on November 14, 2023, {{com.name}} has swiftly become a hub of inspiration and 
+                    knowledge for students, professionals, and enthusiasts across diverse domains.<br><br>This digital haven is not merely a 
+                    repository of code; it's a treasure trove of creativity, offering free and open-source college projects that extend beyond the 
+                    conventional boundaries of academia. Aimed at final year and semester students, {{com.name}}'s impact resonates far beyond the 
+                    college realm, reaching school students, office professionals, medical students, and programmers of all kinds.<br><br>What sets 
+                    {{com.name}} apart is its commitment to providing more than just code snippets. Each project is a carefully crafted narrative, 
+                    complete with detailed ideas, concepts, and functionalities. Beyond the lines of code written in Node.js, Java, Kotlin, HTML, 
+                    CSS, Bootstrap, jQuery, MySQL, and REST API, lies a wealth of information that empowers users to not just replicate, but truly 
+                    understand the essence and purpose of each project.<br><br>From basic website templates to intricate mobile apps, {{com.name}} 
+                    caters to a broad spectrum of interests and expertise. The projects transcend the ordinary, offering real-world applicability and 
+                    sparking excitement in the field of computer science. The founder's passion for sharing knowledge and fostering a collaborative 
+                    learning environment is evident in every aspect of {{com.name}}.<br><br>More than a repository, {{com.name}} is a community—an 
+                    ecosystem where ideas flourish, concepts come to life, and users are encouraged to explore, learn, and innovate. It's a testament 
+                    to the belief that knowledge should be freely accessible to all, breaking down barriers and fostering a culture of inclusivity.<br>
+                    <br>As users navigate through the intricacies of {{com.name}}, they embark on a journey of discovery, guided by the philosophy that 
+                    education is not just about the destination but the experience along the way. In the hands of '{{com.owner}},' {{com.name}} isn't 
+                    just a website; it's a movement—a pulsating heart in the world of programming, beating with the rhythm of collaboration, creativity, 
+                    and the boundless potential of shared knowledge.
                 </p>
-                <div>Looking for API docs of previous releases?
+                <div>Looking for latest projects releases?
                     <ul>
                         <li>Node.js 20.x</li>
                         <li>Node.js 19.x</li>
                         <li>Node.js 18.x</li>
                         <li>Node.js 17.x</li>
-                        <li>Node.js 16.x</li>
-                        <li>Node.js 15.x</li>
-                        <li>Node.js 14.x</li>
-                        <li>Node.js 13.x</li>
-                        <li>Node.js 12.x</li>
-                        <li>Node.js 11.x</li>
-                        <li>Node.js 10.x</li>
-                        <li>Node.js 9.x</li>
-                        <li>Node.js 8.x</li>
-                        <li>Node.js 7.x</li>
-                        <li>Node.js 6.x</li>
-                        <li>Node.js 5.x</li>
-                        <li>Node.js 4.x</li>
-                        <li>Node.js 0.12.x</li>
-                        <li>Node.js 0.10.x</li>
                     </ul>
-                    All versions
+                    All projects
                 </div>
-                <h3>ES6 features</h3>
-                <p>The ES6 section describes the three ES6 feature groups, and details which features are enabled by default in Node.js, alongside 
-                explanatory links. It also shows how to find which version of V8 shipped with a particular Node.js release.
+                <h3>Code reference documentation</h3>
+                <p>{{com.name}}, the brainchild of '{{com.owner}},' is a dynamic web platform built with cutting-edge technologies to provide an 
+                    enriching coding experience. The website is powered by Node.js as its backend, while the frontend showcases the simplicity 
+                    and elegance of vanilla HTML, CSS, and Mantissa.js. Adding a layer of efficiency, the middleware and database handling are 
+                    seamlessly managed by <a href="#">Hex.js</a>—a powerful variant of JavaScript.<br><br>To ensure a seamless user experience, 
+                    {{com.name}} incorporates internal-local APIs, skillfully crafted using Hex.js and FastAPI. Leveraging libraries and Bootstrap, 
+                    the platform boasts not only speed but also an aesthetically pleasing UI/UX design. Security is a top priority, and {{com.name}} 
+                    is fortified with a firewall to safeguard user interactions.<br><br>In terms of documentation, the System Requirements 
+                    Specification (SRS) is a concise yet comprehensive document. Authored by Krish for Krish, this self-maintained SRS outlines 
+                    all project requirements and feasibility aspects. The simplicity of the SRS document aligns with the streamlined approach of 
+                    the website, making it easy to navigate the project's essentials.<br><br>In the realm of development methodologies, 
+                    {{com.name}} follows a <a href="#">DevOps software model</a>, encompassing the entire lifecycle from creation to testing and 
+                    maintenance. While Agile methodologies were initially suggested, the transition to DevOps has proven instrumental in achieving 
+                    continuous integration and delivery, ensuring a robust and evolving platform. {{com.name}} is not just a code repository; it's 
+                    a testament to the seamless fusion of technology, user experience, and efficient development practices.
                 </p>
-                <h3>Guides</h3>
-                <p>The Guides section has long-form, in-depth articles about Node.js technical features and capabilities.
+                <h3>Nomenclature of {{com.name}}</h3>
+                <p>The name "{{com.name}}" was meticulously chosen to encapsulate the essence of our platform, reflecting its dynamic and vibrant 
+                    nature in the world of programming. At its core, "{{com.name}}" signifies more than just a repository of code—it embodies a lively 
+                    and thriving ecosystem for projects. The intentional pairing of "Project" and "Pulse" serves as a profound message. {{com.name}} 
+                    speaks to the heart of our mission: to provide a pulsating, energetic platform for free and open-source projects. The word "Pulse" 
+                    carries profound connotations, symbolizing life, energy, existence, and ceaseless activity. In the context of our website, it resonates 
+                    with the idea that the platform is alive—throbbing with the pulse of ongoing projects, ideas, and development activities.<br><br>
+                    Choosing "{{com.name}}" is a deliberate nod to the vitality inherent in the field of programming. The name conveys the perpetual 
+                    heartbeat of innovation and collaboration, capturing the spirit of a community engaged in constant exploration and creation. 
+                    It signifies that within the platform, projects aren't static entities but living entities, evolving with the rhythm of continuous 
+                    development. Every line of code uploaded to {{com.name}} is a heartbeat, a contribution to the pulsating energy of the programming 
+                    community. The name encapsulates the ethos of a platform that doesn't just host projects but breathes life into them. It's an 
+                    invitation for users to connect with the heartbeat of technology, to be part of a living, thriving ecosystem where ideas are born, 
+                    projects flourish, and the pulse of innovation beats incessantly.<br><br>{{com.name}} is more than a name; it's a message. It's a 
+                    call to action, an affirmation that within this digital realm, the pulse of projects beats strong and vibrant, fostering a community 
+                    where creativity, collaboration, and constant activity define the very heartbeat of programming.
                 </p>
-                <h3>Dependencies</h3>
+                <h3>Finger print of {{com.name}}</h3>
+                <img src="./fav-icon/logo-txt.png" alt="{{com.name}}" id="logo1"/>
                 <p>Node.js depends on additional components beyond the Node.js code itself. These dependencies provide both native and JavaScript code 
                 and are built together with the code under the src and lib directories to create the Node.js binaries.
                 </p>
             </div>
             <div class="side-r" id="ad1">
             	<h3>About {{com.owner}}</h3>
-                <p>Lorem ipsum set amet dolar.</p>
+                <img src="./fav-icon/{{com.owner}}.png" alt="{{com.owner}} Logo" id="logo2"/>
+                <p>{{com.owner}}, a name that transcends mere nomenclature, is the brainchild of <a href="#"onclick="aboutRout(2);">{{com.founder}}</a>—a 
+                    visionary in the realm of programming education and innovation. As the driving force behind this digital haven, Krishnendu, 
+                    affectionately known as Krish, has curated an environment where technology becomes a playground for the curious minds eager to explore 
+                    the wonders of programming.<br><br>Dedicated to teaching and inspiring, {{com.owner}} isn't just a website or a YouTube channel; it's 
+                    a platform that embodies the spirit of turning dreams into reality. Through insightful tutorials and engaging content, Kid Krish imparts 
+                    the art of programming, making the seemingly impossible, possible. His unique approach transforms complex concepts into digestible, 
+                    easy-to-understand lessons, fostering a community of aspiring developers.<br><br>{{com.owner}} is not just about code; it's a movement—a 
+                    journey where creativity and innovation converge. Beyond tutorials, Kid Krish delves into the creation of free, user-friendly utilities 
+                    that transcend the boundaries of conventional programming. Each utility is a testament to the belief that technology, when harnessed with 
+                    passion and purpose, can be a force for good.<br><br>The name '{{com.owner}}' isn't just a brand; it's a dream realized. It symbolizes the 
+                    fulfillment of not only Krish's aspirations but also the collective dreams of those who seek to explore the limitless possibilities of 
+                    programming. It's a beacon for learners, dreamers, and creators, inviting them to embark on a transformative journey where knowledge knows 
+                    no bounds.<br><br>Through the myriad channels of <a href="#">YouTube</a>, <a href="#">Facebook</a>, and various social media platforms, 
+                    {{com.owner}} has become more than a name—it's a community, a mentor, and a source of inspiration for all ages. {{com.founder}}'s vision 
+                    extends beyond teaching; it's about empowering individuals to embrace the world of coding, turning their dreams into tangible achievements.
+                    <br><br>In the digital landscape sculpted by {{com.owner}}, every line of code is a brushstroke, painting a picture of innovation, learning, 
+                    and boundless possibilities. As the journey unfolds, {{com.founder}} invites you to be part of this dream—where programming becomes not just 
+                    a skill but a key to unlocking your aspirations.
+                 </p>
             </div>
             <div class="side-r" id="ad2">
             	<h3>About {{com.founder}}</h3>
-                <p>Lorem ipsum set amet dolar.</p>
+                <img src="./fav-icon/Krishdp.jpg" alt="{{com.founder}}" id="logo3"/>
+                <p>{{com.founder}}, affectionately known as <a href="#">Krish</a>, is a passionate student pursuing a Bachelor's degree in Computer Science and Engineering. 
+                    Hailing from the vibrant city of Kolkata in West Bengal, India, Krish embodies a multifaceted skill set and a relentless enthusiasm for 
+                    technology.<br><br>As a versatile <a href="#">Full-stack web developer</a> and <a href="#">AI prompt engineer</a>, Krish has honed his 
+                    expertise in a plethora of programming languages, including HTML, CSS, JavaScript, Node.js, Python, Bootstrap, React, Java, C, and C++, 
+                    Mongos, etc. His commitment to crafting seamless user experiences extends beyond conventional web development, delving into the realms 
+                    of Artificial intelligence and API integration.<br><br>Despite being in the early stages of his professional journey, Krish has already 
+                    left his mark. Having contributed to projects like <a href="#">Ai Dictionary</a> and <a href="#">EdEqu</a>, he has served as a technical 
+                    support stalwart and a mentor in computer education. Krish's dedication to his craft transcends the digital realm, reflecting his passion 
+                    for empowering others through technology.<br><br>Beyond his technical prowess, Krish embraces linguistic diversity, proficient in Bengali, 
+                    Hindi, and English. Hailing from a modest, middle-class family, he exemplifies resilience and determination, showcasing that passion and 
+                    hard work supersede financial status.<br>
+                </p>
+                <div class="scroller">
+                    <div class="btn"id="krishleft" onclick="ksmPrev();">&lt;</div>
+                    <div class="screen"><img src="#"id="krishimg"/></div>
+                    <div class="btn"id="krishright" onclick="ksmNext();">&gt;</div>
+                </div>
+                <p>Open to new opportunities, Krish is not just a coder; he's a <a href="#">storyteller</a>, weaving 
+                    narratives through lines of code and bringing ideas to life. His journey is a testament to the power of continuous learning, collaboration, 
+                    and the unwavering belief that technology can be a catalyst for positive change.<br><br>In every line of code and every project undertaken, 
+                    Krish aspires to make a meaningful impact, transforming challenges into opportunities for growth. As he navigates the ever-evolving landscape 
+                    of technology, {{com.founder}} remains a dedicated learner, creator, and advocate for the limitless possibilities that the digital world 
+                    presents.
+                </p>
             </div>
             <div class="side-r" id="ad3">
             	<h3>Dependencies</h3>
@@ -200,17 +270,17 @@
     	<div class="account">
     	      <div class="accimg">&#x1f464;</div>
               <h4>User Name</h4>
-              <h2>Guest</h2>
+              <div class="flo"><h2>Guest</h2><span onclick="invalid();">🖊️</span></div>
               <p>This is your user name which is visible in public. </p>
               <h4>User ID</h4>
-              <h2>Guest@23001aK&5r9W-2h1f</h2>
+              <div class="flo"><h2>Guest@23001aK&5r9W-2h1f</h2><span onclick="invalid();">🖊️</span></div>
               <p>This is not your user name or pin or visible in public. This id will be use to identify your activities and register your download records.</p>
               <h4>User Location</h4>
-              <h2>22°38', 88°21'</h2>
+              <div class="flo"><h2>22°38', 88°21'</h2><span onclick="invalid();">🖊️</span></div>
               <p>This is your current coordinates , this is not visible in public.</p>
               <div class="btnHolder">
               	<button class="btn btn-danger" title="Delete your current account details" onclick="reset_profile();">Reset</button>
-                  <button class="btn btn-primary" title="Download your account details" onclick="download('.account','ProjectPulse_profile','txt');">Download</button>
+                  <button class="btn btn-primary" title="Download your account details" onclick="download('.account','{{com.name}}_profile','txt');">Download</button>
               </div>
         </div>
     </section>
