@@ -15,6 +15,10 @@ function commandSearch(input){
     	account();
     }else if((input=="projectpulse --date")||(input=="projectpulse://date")){
     	alert("Time: \n"+new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()+", "+new Date().getMinutes()+":"+new Date().getSeconds());
+    }else if((input=="projectpulse --cls")||(input=="projectpulse://cls")){
+    	document.getElementById("S1").value='';
+        document.getElementById("S2").value='';
+        document.getElementById("SearchPage").innerHTML='';
     }else{
     	//search(input.replace("--",""));
     }

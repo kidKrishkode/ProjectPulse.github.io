@@ -7,6 +7,7 @@
   --ngtxt-color: #00ff09;
   --sg-color: #28a745;
   --test-color: #b8b2aab9;
+  --side-l-color: #000;
 }
 body{
     background: var(--bg-color);
@@ -282,7 +283,7 @@ footer{
     margin: 0px 0px;
 }
 .side-l{
-    background-color: #000;
+    background: var(--side-l-color);
     display: flex;
     flex-direction: column;
     width: 20%;
@@ -298,11 +299,25 @@ footer{
     cursor: pointer;
     width: 60%;
     margin: 10px 20%;
+    font-size: 22px;
     outline: none;
 }
 .side-l button:hover,#blink{
     box-shadow: 0px 0px 3px 2px var(--sg-color);
     color: #fff;
+}
+.side-r #logo1,.side-r #logo3{
+    width: 20%;
+    margin: 2px calc((100% - 20%)/2);
+}
+.side-r #logo2{
+    width: 30%;
+    margin: 2px 35%;
+}
+.side-r #logo3{
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 3px 2px var(--ngtxt-color);
 }
 .side-r p{
     text-align: justify;
@@ -313,13 +328,44 @@ footer{
 }
 .side-r div{
     font-family: Consolas, 'Courier New', monospace;
-    background: #2f2f2fbc;
+    background: var(--nv-color);
     padding: 3px;
     width: 80%;
     margin: 10px auto;
+    border-radius: 5px;
 }
 ul{
     list-style: none;
+}
+.side-r ul li{
+    font-size: 18px;
+    line-height: 35px;
+}
+.side-r .scroller{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.side-r .scroller .btn{
+    width: 10%;
+    color: var(--ngtxt-color);
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 25%;
+    cursor: pointer;
+}
+.side-r .scroller .screen{
+    width: 80%;
+    background: var(--wtxt-color);
+    height: 700px;
+}
+.side-r .scroller .screen img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: none;
 }
 #ad0,#ad1,#ad2,#ad3{
 	display: none;
@@ -425,10 +471,17 @@ ul{
 	overflow: hidden;
     background: var(--bg-color);
 }
-#AccountPage .account h4,#AccountPage .account h2,#AccountPage .account p{
+#AccountPage .account .flo{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0px;
+	width: 100%;
+}
+#AccountPage .account h4,#AccountPage .account .flo h2,#AccountPage .account p{
 	margin: 0px;
 }
-#AccountPage .account h2{
+#AccountPage .account .flo h2{
 	color: var(--wtxt-color);
 	font-size: 22px;
 }
@@ -518,12 +571,38 @@ ul{
     }.side-l{
     	padding: 10px 0px;
     }.side-r{
-        width: 88%;
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .side-r #logo1,.side-r #logo3{
+        width: 60%;
+        margin: 2px calc((100% - 60%)/2);
+    }
+    .side-r #logo2{
+    	width: 80%;
+        margin: 2px 10%;
+    }
+    .side-r .scroller .btn{
+        width: 5%;
+        padding-left: 0px;
+    }
+    .side-r .scroller .screen{
+        width: 85%;
+        height: 180px;
+    }
+    .side-r h3{
+    	padding: 2px 10px!important;
+    }
+    .side-r p{
+    	padding: 2px 20px!important;
     }
     .side-l button{
         padding: 8px 6px;
         width: 80%;
         margin: 10px 10%;
+        font-size: 16px;
+    }
+    .side-r ul li{
         font-size: 16px;
     }
     #h41,#h42,#h43,#h44,#h45{

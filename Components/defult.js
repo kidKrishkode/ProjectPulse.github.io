@@ -4,6 +4,7 @@ let aboutList = ["abtn0","abtn1","abtn2"];
 let additionalList = ["SearchPage","AccountPage"];
 let cls = 1;
 let SrcPg=0;
+let ksm=0;
 function menubar(){
     if(nav==0){
         document.querySelector(".downMenu").style.display="block";
@@ -19,8 +20,10 @@ function user(){
     body.innerHTML = body.innerHTML.replaceAll('{{com.owner}}',locals.com.owner);
     body.innerHTML = body.innerHTML.replaceAll('{{com.founder}}',locals.com.founder);
     document.title = locals.com.name;
+    document.getElementById("year").textContent = new Date().getFullYear();
     pageRout(0);
     typing();
+    ksmImg(ksm);
 }
 function pageRout(id){
     for(let i=0; i<pageList.length; i++){
@@ -58,7 +61,7 @@ function aboutRout(id){
 		document.getElementById(`${aboutList[j]}`).style.background = "transparent";
 		document.getElementById(`ad${j}`).style.display = "none";
 	}
-	document.getElementById(`${aboutList[id]}`).style.background = "#28a745";
+	document.getElementById(`${aboutList[id]}`).style.background = "var(--sg-color)";
 	document.getElementById(`ad${id}`).style.display = "block";
 }
 function search(data){
@@ -106,11 +109,41 @@ function account(){
 	SrcPg=0;
 }
 function download(id,name,extansion){
-	invalid();
+	const textToDownload = document.querySelector(id).textContent;
+    const fileName = `${name}.${extansion}`;
+    const blob = new Blob([textToDownload], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = fileName;
+    link.click();
 }
 function reset_profile(){
 	invalid();
 }
 function invalid(){
 	alert("This features is not open for this version.");
+}
+function ksmImg(current){
+    document.getElementById('krishimg').src = `${KrishSlider[current].src}`;
+    document.getElementById('krishimg').onload = function(){
+        document.getElementById('krishimg').style.display="block";
+    };
+}
+function ksmPrev(){
+	document.getElementById('krishimg').style.display="none";
+    if(ksm==0){
+        ksm=KrishSlider.length-1;
+    }else{
+        ksm--;
+    }
+    ksmImg(ksm);
+}
+function ksmNext(){
+	document.getElementById('krishimg').style.display="none";
+    if(ksm==KrishSlider.length-1){
+        ksm=0;
+    }else{
+        ksm++;
+    }
+    ksmImg(ksm);
 }
